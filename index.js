@@ -107,3 +107,19 @@ var monthTotal = (finances.length);
 
 console.log("Total Months: " + monthTotal);
 
+// The net total amount of Profit/Losses over the entire period.
+// Setting variables, intialising profitLosses to 0
+var monthlyFinances;
+var profitLosses = 0;
+var monthlyProfitLoss;
+
+// Looping through the nested array and setting montlyProfitLoss to equal the number element type in the arrays
+for (i = 0; i < finances.length; i++){
+    monthlyFinances = finances[i];
+    monthlyProfitLoss = monthlyFinances[1];
+    // Setting profitLosses variable to equal profitLosses + monthlyProfitLoss
+    profitLosses += monthlyProfitLoss;
+}
+
+console.log("Total: " + pounds.format(profitLosses));
+
