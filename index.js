@@ -123,3 +123,46 @@ for (i = 0; i < finances.length; i++){
 
 console.log("Total: " + pounds.format(profitLosses));
 
+// The average of the changes in Profit/Losses over the entire period.
+    // You will need to track what the total change in profits are from month to month and then find the average.
+    // (Total/Number of months)
+
+    // Initialising variables
+var monthValues = 0;
+var monthSum = 0
+var plAverage = 0;
+var differences = [];
+
+// Traversing outter and inner loops to get the month value differences
+for (var i = 0; i < finances.length; i++) {
+    for (var j = i + 1; j < finances.length; j++) {
+            monthValues = finances[j][1] - finances[i][1];
+            // 
+        differences.push(monthValues);
+            i++;
+    }
+}
+
+// Adding the differences together
+for(var k = 0; k < differences.length; k++) {
+        monthSum += differences[k];
+}
+
+// Get average of changes for the month differences 
+// (excluding first month as there is nothing to compare against)
+plAverage = monthSum / (finances.length -1);
+
+console.log("Average Change: " + pounds.format(plAverage));
+
+// Outputing Average change to console fixed to 2 decimal places
+// console.log('Average Change: $' + plAverage.toFixed(2));
+
+// The greatest increase in profits (date and amount) over the entire period.
+var maximumProfits = Math.max(...differences);
+var profitsMonth = differences.indexOf(maximumProfits) + 1;
+console.log("Greatest Increase in Profits: " + finances[profitsMonth][0] + " (" + pounds.format(maximumProfits) ")");
+
+// The greatest decrease in losses (date and amount) over the entire period.
+var maximumLosses = Math.min(...differences);
+var lossesMonth = differences.indexOf(maximumLosses) + 1;   
+console.log("Greatest Decrease in Losses: " + finances[lossesMonth][0] + " (" + pounds.format(maximumLosses) + ")");
