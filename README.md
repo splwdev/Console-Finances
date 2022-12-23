@@ -31,10 +31,10 @@
 <br />
 <div align="center">
   
-<h3 align="center">Horiseon Web Application</h3>
+<h3 align="center">Financial Analysis Tool</h3>
 
   <p align="center">
-    Refactoring Project
+    Data Analysis Project
     <br />
     <a href="https://github.com/splwdev/Console-Finances"><strong>Explore the docs »</strong></a>
     <br />
