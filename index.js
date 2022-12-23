@@ -90,6 +90,33 @@ var finances = [
 // Displaying array into table to get a better visual of the indexes
 // console.table(finances);
 
+// Intended to display array in HTML in table format, but table was too long
+// Outputting array into table in HTML
+// const table = document.querySelector("#finances");
+// const headers = table.querySelector("thead tr");
+// const body = table.querySelector("tbody");
+                    
+// Create headers
+// for (const key in finances[0]) {
+//   const header = document.createElement("th");
+//   header.innerText = key;
+//   headers.append(header);
+// }
+
+// Create tbody rows
+// finances.forEach(obj => {
+// Create row
+//   const row = document.createElement("tr");
+//   body.append(row);
+  
+// Create row element
+//   for (const key in obj) {
+//     const value = document.createElement("td");
+//     value.innerText = obj[key];
+//     row.append(value);
+//   }
+// });
+
 // Change format of currency from dollars to pounds with 2 decimal places
 var pounds = new Intl.NumberFormat("en-GB", {
     style: "currency",
@@ -104,8 +131,8 @@ console.log("----------------------------");
 
 // The total number of months included in the dataset.
 var monthTotal = (finances.length);
-
 console.log("Total Months: " + monthTotal);
+document.getElementById("months").innerHTML = monthTotal;
 
 // The net total amount of Profit/Losses over the entire period.
 // Setting variables, intialising profitLosses to 0
@@ -122,12 +149,13 @@ for (i = 0; i < finances.length; i++){
 }
 
 console.log("Total: " + pounds.format(profitLosses));
+document.getElementById("profitLoss").innerHTML = pounds.format(profitLosses);
 
 // The average of the changes in Profit/Losses over the entire period.
     // You will need to track what the total change in profits are from month to month and then find the average.
     // (Total/Number of months)
 
-    // Initialising variables
+// Initialising variables
 var monthValues = 0;
 var monthSum = 0
 var plAverage = 0;
@@ -136,16 +164,16 @@ var differences = [];
 // Traversing outter and inner loops to get the month value differences
 for (var i = 0; i < finances.length; i++) {
     for (var j = i + 1; j < finances.length; j++) {
-            monthValues = finances[j][1] - finances[i][1];
-            // 
+        monthValues = finances[j][1] - finances[i][1];
+        // Pushing month values to array
         differences.push(monthValues);
-            i++;
+        i++;
     }
 }
 
-// Adding the differences together
+// Looping and adding the differences together
 for(var k = 0; k < differences.length; k++) {
-        monthSum += differences[k];
+    monthSum += differences[k];
 }
 
 // Get average of changes for the month differences 
@@ -153,6 +181,7 @@ for(var k = 0; k < differences.length; k++) {
 plAverage = monthSum / (finances.length -1);
 
 console.log("Average Change: " + pounds.format(plAverage));
+document.getElementById("plAverage").innerHTML = pounds.format(plAverage);
 
 // Outputing Average change to console fixed to 2 decimal places
 // console.log('Average Change: $' + plAverage.toFixed(2));
@@ -160,9 +189,11 @@ console.log("Average Change: " + pounds.format(plAverage));
 // The greatest increase in profits (date and amount) over the entire period.
 var maximumProfits = Math.max(...differences);
 var profitsMonth = differences.indexOf(maximumProfits) + 1;
-console.log("Greatest Increase in Profits: " + finances[profitsMonth][0] + " (" + pounds.format(maximumProfits) ")");
+console.log("Greatest Increase in Profits: " + finances[profitsMonth][0] + " (" + pounds.format(maximumProfits) + ")");
+document.getElementById("grtIncrease").innerHTML = finances[profitsMonth][0] + " (" + pounds.format(maximumProfits) + ")";
 
 // The greatest decrease in losses (date and amount) over the entire period.
 var maximumLosses = Math.min(...differences);
 var lossesMonth = differences.indexOf(maximumLosses) + 1;   
 console.log("Greatest Decrease in Losses: " + finances[lossesMonth][0] + " (" + pounds.format(maximumLosses) + ")");
+document.getElementById("grtLoss").innerHTML = finances[lossesMonth][0] + " (" + pounds.format(maximumLosses) + ")";

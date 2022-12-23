@@ -10,51 +10,20 @@
   <link rel="stylesheet" href="style.css">
   <title>M4 Challenge</title>
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Financial Analysis Tool</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+<body class="bg-dark d-flex align-items-center justify-content-center">
+
+  <div class="card w-40">
+    <div class="card-header text-center text-light bg-primary">
+      <h1>Financial Analysis Tool</h1>
     </div>
-  </nav>
-  <section class="container-fluid">
-    <div class="row">
-      <div class="jumbotron jumbotron-fluid col-12">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-      </div>
-    </div>
-  </section>
+    <ul class="list-group">
+      <li class="list-group-item"><strong>Total Months Reported On: </strong><span id="months"></span></li>
+      <li class="list-group-item"><strong>Overall Total Profit / Losses: </strong><span id="profitLoss"></span></li>
+      <li class="list-group-item"><strong>Average Change per Month:</strong> <span id="plAverage"></span></li>
+      <li class="list-group-item"><strong>Greatest Profit Margin (Month / Amount):</strong> <span id="grtIncrease"></span></li>
+      <li class="list-group-item"><strong>Greatest Loss (Month / Amount):</strong> <span id="grtLoss"></span></li>
+    </ul>
+  </div>
 
   <script src="index.js"></script>
   <!-- jQuery and Bootstrap Bundle (includes Popper) -->
