@@ -76,15 +76,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project was given to us as a learning exercise to consolidate our knowledge through the process of refactoring the existing code to ensure that the Horiseon website meets accessibility standards so that people can access the site without any hindrance.
+This project presented a real-world situation in which we could showcase our newfound JavaScript skills. Our task for this project was to create the code for analysing the financial records of a company.
 
-## User Story
-
-AS A marketing agency
-I WANT a codebase that follows accessibility standards
-SO THAT our own site is optimized for search engines<br>
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://splwdev.github.io/Console-Finances)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -93,7 +87,8 @@ SO THAT our own site is optimized for search engines<br>
 ### Built With
 
 [![HTML][HTML]][HTML-url]<br>
-[![CSS][CSS]][CSS-url]
+[![CSS][CSS]][CSS-url]<br>
+[![JavaScript][JavaScript]][JavaScript-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -157,6 +152,7 @@ Project Link: [https://github.com/splwdev/Console-Finances](https://github.com/s
 
 * [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 * [EDX Skills for Life Bootcamp](https://skillsforlife.edx.org/)
+* [Stack Overflow](https://stackoverflow.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -181,3 +177,5 @@ Project Link: [https://github.com/splwdev/Console-Finances](https://github.com/s
 [HTML-url]: https://developer.mozilla.org/en-US/docs/Web/HTML
 [CSS]: https://img.shields.io/badge/css-DD0031?style=for-the-badge
 [CSS-url]: https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade
+[JavaScript]: https://img.shields.io/badge/javascript-yellow?style=for-the-badge
+[JavaScript-url]: https://developer.mozilla.org/en-US/docs/Web/javascript
